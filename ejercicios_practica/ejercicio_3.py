@@ -58,6 +58,22 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
-    scatter_plot()
+    fig = plt.figure()
+    fig.suptitle('Scatter Plot: y = tanh(x)', fontsize=14)
+
+    ax = fig.add_subplot()
+
+    # Graficar usando scatter
+    ax.scatter(x, y, c='darkcyan', marker='o', label='y = tanh(x)')
+
+    # Configuración de labels, leyenda, grilla y fondo
+    ax.set_xlabel('x [rads]')
+    ax.set_ylabel('y [tanh(x)]')
+    ax.set_facecolor('whitesmoke')
+    ax.grid(True)
+    ax.legend()
+
+    # Mostrar el gráfico
+    plt.show()
 
     print("terminamos")
